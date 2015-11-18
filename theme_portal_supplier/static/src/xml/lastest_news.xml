@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="website_collegiate_claim_templates" xml:space="preserve">
+
+    <t t-name="error_info">
+        <div class="alert alert-danger" role="alert">
+            <i class="fa fa-exclamation-circle"></i>
+            <span class="sr-only">Error:</span>
+            <t t-esc="error"/>
+        </div>
+    </t>
+
+    <t t-name="info">
+        <div class="alert alert-success" role="alert">
+            <i class="fa fa-thumbs-o-up"></i>
+            <span class="sr-only">Info:</span>
+            <t t-esc="collegiate_name"/>
+        </div>
+    </t>
+
+</templates>

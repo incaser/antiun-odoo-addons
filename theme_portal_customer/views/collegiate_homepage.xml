@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="website_collegiate_theme assets">
+            <xpath expr="." position="inside">
+                <link rel='stylesheet' href='/website_collegiate_theme/static/src/css/style.css'/>
+            </xpath>
+        </template>
+
+ 	<template id="homepage_inherit" inherit_id="website.homepage">
+	    <xpath expr="//div" position="after">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                            <div class="s_panel panel panel-alpha mt32">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                    <div class="col-md-10">
+                                        <h3 class="mt0 mb0"><i class="fa fa-comments-o fa-1x"/>Sala de Prensa</h3>
+                                    </div>
+                                    <div class="col-md-2 text-right">
+                                        <h4 class="mt0 mb0"><a href="/blog">ver más</a></h4>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <t t-call="website_collegiate_theme.press_room"/>
+                                </div>
+                            </div>
+                            <div class="s_panel panel panel-alpha mt32">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                    <div class="col-md-10">
+                                        <h3 class="mt0 mb0"><i class="fa fa-newspaper-o fa-1x"/>Últimas noticias</h3>
+                                    </div>
+                                    <div class="col-md-2 text-right">
+                                        <h4 class="mt0 mb0"><a href="/blog">ver más</a></h4>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <t t-call="website_collegiate_theme.news"/>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                            <div class="s_panel panel panel-alpha mt32">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3 class="mt0 mb0"><i class="fa fa-calendar fa-1x"/>Agenda</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <t t-call="website_collegiate_theme.last_events"/>
+                                    <div class="col-md-12 text-right panel-footer mt8">
+                                        <h4 class="mt0 mb0"><a href="/event">ver más</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_panel panel panel-alpha mt32">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <h3 class="mt0 mb0"><i class="fa fa-users fa-1x"/>Colaboradores</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12 mt8 mb16">
+                                    <t t-call="website_sponsor.banner_position_col"/>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    </data>
+</openerp>
