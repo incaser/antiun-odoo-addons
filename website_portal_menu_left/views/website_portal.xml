@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="account" name="Account" inherit_id="website_portal.account">
+        <xpath expr="//ul[contains(@name,'account-content-nav')]" position="inside">
+            <t t-if="user_id.partner_id.supplier">
+                <li t-att-class="'active' if not user_id.partner_id.customer else ''">
+                    <a data-toggle="tab" href="#home-supplier">Supplier</a>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//div[contains(@name,'account-content')]" position="inside">
+            <t t-if="user_id.partner_id.supplier">
+                <div id="home-supplier"
+                    t-att-class="'tab-pane fade' + (' in active' if not user_id.partner_id.customer else '')">
+                    <t t-call="website_portal_purchase.request_quotations" />
+                    <t t-call="website_portal_purchase.purchase_orders" />
+                    <t t-call="website_portal_purchase.supplier_invoices" />
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</data>
+</openerp>
