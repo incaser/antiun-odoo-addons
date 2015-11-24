@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+<template id="assets_frontend"
+          inherit_id="website.assets_frontend"
+          name="Theme Portal Supplier"
+          priority="20">
+    <xpath expr="." position="inside">
+    	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    	<link rel="stylesheet" href="/theme_portal_supplier/static/src/css/frontend.css"/>
+        <link rel="stylesheet" href="/theme_portal_supplier/static/src/css/theme.css"/>
+        <script type="text/javascript" src="/theme_portal_supplier/static/src/js/frontend.js"></script>
+    </xpath>
+</template>
+
+</data>
+</openerp>
