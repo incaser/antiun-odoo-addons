@@ -4,17 +4,17 @@
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
 {
-    'name': "Website Portal Sale Left Menu",
-    'summary': "New layout to show portal sale options into left menu",
+    'name': "Website Portal Purchase Left Menu",
+    'summary': "New layout to show portal purchase options into left menu",
     'category': 'Website',
     'version': '8.0.1.0.0',
     'depends': [
-        'website_portal_sale',
+        'website_portal_purchase',
         'website_portal_left_menu',
     ],
     'data': [
         'data/left_menu.xml',
-        'views/website_portal_sale.xml',
+        'views/website_portal_purchase.xml',
     ],
     'qweb': [
     ],

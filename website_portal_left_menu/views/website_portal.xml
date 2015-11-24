@@ -30,7 +30,7 @@
 
     <template id="details" name="Details" inherit_id="website_portal.details">
         <xpath expr="t[@t-call='website.layout']" position="attributes">
-                <attribute name="t-call">website_portal_left_menu.layout</attribute>
+            <attribute name="t-call">website_portal_left_menu.layout</attribute>
         </xpath>
     </template>
 

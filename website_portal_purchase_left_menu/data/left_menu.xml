@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <!-- Pruchase menu Header-->
+    <record id="left_menu_purchase_header" model="website.menu">
+      <field name="name">Purchases</field>
+      <field name="url"></field>
+      <field name="parent_id" ref="website_portal_left_menu.left_menu"/>
+      <field name="sequence" type="int">30</field>
+    </record>
+
+    <!-- Pruchase Request Quotations -->
+    <record id="left_menu_request_quotation" model="website.menu">
+      <field name="name">Purchase Request Quotations</field>
+      <field name="url">/my/supplier/request-quotations</field>
+      <field name="parent_id" ref="website_portal_purchase_left_menu.left_menu_purchase_header"/>
+      <field name="sequence" type="int">10</field>
+    </record>
+
+    <!-- Purchase Orders -->
+    <record id="left_menu_purchase_order" model="website.menu">
+      <field name="name">Purchase Orders</field>
+      <field name="url">/my/supplier/orders</field>
+      <field name="parent_id" ref="website_portal_purchase_left_menu.left_menu_purchase_header"/>
+      <field name="sequence" type="int">20</field>
+    </record>
+
+    <!-- Supplier Invoices -->
+    <record id="left_menu_supplier_invoice" model="website.menu">
+      <field name="name">Supplier Invoices</field>
+      <field name="url">/my/supplier/invoices</field>
+      <field name="parent_id" ref="website_portal_purchase_left_menu.left_menu_purchase_header"/>
+      <field name="sequence" type="int">30</field>
+    </record>
+
+</data>
+</openerp>

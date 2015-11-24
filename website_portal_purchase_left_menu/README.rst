@@ -2,14 +2,12 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-========================
-Website Portal Left Menu
-========================
+=================================
+Website Portal Purchase Left Menu
+=================================
 
-This module was written to extends the functionality of website_portal module
-to support render layouts with a traditional structure containing a left menu.
-This module has been done to add into left menu other portal modules.
-
+This module was written to extends the functionality of
+website_portal_left_menu module to render layouts with a traditional structure into left menu.
 
 Installation
 ============
@@ -31,6 +29,7 @@ Usage
 To use this module, you need to:
 
 * go to login and click to *My Account* into top menu.
+* go to purchase options on left menu.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
@@ -42,7 +41,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
-`here <https://github.com/OCA/website/issues/new?body=module:%20website_portal_left_menu%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`here <https://github.com/OCA/website/issues/new?body=module:%20website_portal_purchase_left_menu%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Credits
 =======

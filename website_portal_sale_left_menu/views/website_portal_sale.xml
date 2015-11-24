@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="quotations_only"
+              name="Quotations"
+              inherit_id="website_portal_sale.quotations_only">
+        <xpath expr="t[@t-call='website.layout']" position="attributes">
+            <attribute name="t-call">website_portal_left_menu.layout</attribute>
+        </xpath>
+    </template>
+
+    <template id="sale_orders_only"
+              name="Orders"
+              inherit_id="website_portal_sale.sale_orders_only">
+        <xpath expr="t[@t-call='website.layout']" position="attributes">
+            <attribute name="t-call">website_portal_left_menu.layout</attribute>
+        </xpath>
+    </template>
+
+    <template id="invoices_only"
+              name="Invoices"
+              inherit_id="website_portal_sale.invoices_only">
+        <xpath expr="t[@t-call='website.layout']" position="attributes">
+            <attribute name="t-call">website_portal_left_menu.layout</attribute>
+        </xpath>
+    </template>
+
+</data>
+</openerp>
