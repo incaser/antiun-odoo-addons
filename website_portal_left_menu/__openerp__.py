@@ -4,20 +4,18 @@
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
 {
-    'name': "Website Portal Menu Left",
+    'name': "Website Portal Left Menu",
     'summary': "New layout to show left menu",
     'category': 'Website',
     'version': '8.0.1.0.0',
     'depends': [
-        'website',
+        'website_portal',
     ],
-    'external_dependencies': {},
     'data': [
-        'views/layout.xml',
-        'views/pages.xml',
         'data/left_menu.xml',
-        'views/website_product_supplier_view.xml',
-        'views/website_portal_purchase_view.xml',
+        'views/assets.xml',
+        'views/layout.xml',
+        'views/website_portal.xml',
     ],
     'qweb': [
     ],
@@ -27,9 +25,5 @@
               'Incaser Informatica S.L., ',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
-    'demo': [],
-    'test': [],
     'installable': True,
-    # 'auto_install':False,
-    # 'application':False,
 }
