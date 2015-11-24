@@ -26,5 +26,13 @@
         </xpath>
     </template>
 
+    <template id="orders_followup"
+              name="Purchase Order"
+              inherit_id="website_portal_purchase.orders_followup">
+        <xpath expr="t[@t-call='website.layout']" position="attributes">
+            <attribute name="t-call">website_portal_left_menu.layout</attribute>
+        </xpath>
+    </template>
+
 </data>
 </openerp>

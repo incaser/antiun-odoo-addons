@@ -23,51 +23,49 @@
 
 <template id="left_menu_wrap" name="Left Menu Wrap">
     <div class="sidebar-nav">
-      <nav id="oe_left_menu_navbar" class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse-left-menu">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="visible-xs navbar-brand">Menu</span>
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="visible-xs navbar-brand">Your Account</span>
+            </div>
+            <div class="navbar-collapse collapse in sidebar-navbar-collapse">
+                <ul id="sidebar-left-items" class="nav navbar-nav">
+                    <li><a href="/my/home"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
         </div>
-        <div class="navbar-collapse collapse sidebar-navbar-collapse-left-menu">
-          <ul id="left_menu" class="nav navbar-nav">
-            <t t-set="left_menu"
-               t-value="request.env.ref('website_portal_left_menu.left_menu')"/>
-            <t t-foreach="left_menu.child_id" t-as="submenu">
-                <t t-call="website_portal_left_menu.submenu"/>
-            </t>
-          </ul>
-        </div>
-      </nav>
     </div>
 </template>
 
-<template id="submenu" name="Submenu">
-    <li t-if="not submenu.child_id" t-att-class="
-        'active' if submenu.url and submenu.url != '/' and request.httprequest.path == submenu.url.replace('/page/website.', '/page/') else None
-        ">
-        <a t-att-href="(website.menu_id.child_id[0] == submenu) and '/' or submenu.url" t-ignore="true" t-att-target="'_blank' if submenu.new_window else None">
-            <span t-field="submenu.name"/>
-        </a>
-    </li>
-    <li t-if="submenu.child_id" t-attf-class="dropdown #{
-        (submenu.url and submenu.url != '/' and any([request.httprequest.path == child.url.replace('/page/website.', '/page/') for child in submenu.child_id if child.url]) or
-         (submenu.url and request.httprequest.path == submenu.url.replace('/page/website.', '/page/'))) and 'active'
-        }">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <span t-field="submenu.name"/> <span class="caret" t-ignore="true"></span>
-        </a>
-        <ul class="dropdown-menu" role="menu">
-            <t t-foreach="submenu.child_id" t-as="submenu">
-                <t t-call="website.submenu"/>
-            </t>
-        </ul>
-    </li>
-</template>
+<!--<template id="left_menu_wrap_xx" name="Left Menu Wrap">-->
+    <!--<div class="sidebar-nav">-->
+      <!--<nav id="oe_left_menu_navbar" class="navbar navbar-default" role="navigation">-->
+        <!--<div class="navbar-header">-->
+          <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse-left-menu">-->
+            <!--<span class="sr-only">Toggle navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+          <!--</button>-->
+          <!--<span class="visible-xs navbar-brand">Menu</span>-->
+        <!--</div>-->
+        <!--<div class="navbar-collapse collapse sidebar-navbar-collapse-left-menu">-->
+          <!--<ul id="left_menu" class="nav navbar-nav collapse">-->
+            <!--<t t-set="left_menu"-->
+               <!--t-value="request.env.ref('website_portal_left_menu.left_menu')"/>-->
+            <!--<t t-foreach="left_menu.child_id" t-as="submenu">-->
+                <!--<t t-call="website_portal_left_menu.submenu"/>-->
+            <!--</t>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</nav>-->
+    <!--</div>-->
+<!--</template>-->
 
 </data>
 </openerp>

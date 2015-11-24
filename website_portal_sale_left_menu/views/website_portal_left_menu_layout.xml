@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="left_menu_wrap"
+          inherit_id="website_portal_left_menu.left_menu_wrap"
+          name="Left Menu Wrap Sales">
+    <xpath expr="//ul[@id='sidebar-left-items']" position="inside">
+        <t t-if="user_id.partner_id.customer">
+            <li class="active left-menu-separator">Sales</li>
+            <li><a href="/my/home/quotations"><span class="glyphicon glyphicon-folder-open"></span> Quotations</a></li>
+            <li><a href="/my/home/orders"><span class="glyphicon glyphicon-shopping-cart"></span> Orders</a></li>
+            <li><a href="/my/home/invoices"><span class="glyphicon glyphicon-usd"></span> Invoices</a></li>
+        </t>
+    </xpath>
+</template>
+
+</data>
+</openerp>

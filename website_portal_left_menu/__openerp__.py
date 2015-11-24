@@ -13,7 +13,6 @@
     ],
     'data': [
         'data/left_menu.xml',
-        'views/assets.xml',
         'views/layout.xml',
         'views/website_portal.xml',
     ],

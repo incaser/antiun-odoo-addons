@@ -13,8 +13,9 @@
         'website_portal_left_menu',
     ],
     'data': [
-        'data/left_menu.xml',
+        # 'data/left_menu.xml',
         'views/website_portal_purchase.xml',
+        'views/website_portal_left_menu_layout.xml',
     ],
     'qweb': [
     ],
