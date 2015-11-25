@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <!--<template id="supplier_product_list"-->
+              <!--name="Supplier Product List"-->
+              <!--inherit_id="website_product_supplier.supplier_product_list">-->
+        <!--<xpath expr="t[@t-call='website.layout']" position="attributes">-->
+            <!--<attribute name="t-call">website_portal_left_menu.layout</attribute>-->
+        <!--</xpath>-->
+    <!--</template>-->
+
+</data>
+</openerp>

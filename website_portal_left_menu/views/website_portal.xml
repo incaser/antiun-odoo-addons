@@ -2,37 +2,37 @@
 <openerp>
 <data>
 
-    <template id="account" name="Account" inherit_id="website_portal.account">
-        <xpath expr="//t[contains(@t-call,'website.layout')]" position="replace">
-            <t t-call="website_portal_left_menu.layout">
-                <div id="wrap">
-                    <div class="container mb64">
-                        <div class="col-md-12">
-                            <div class="o_my_details">
-                                <h3>Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>
-                                <div t-field="user.partner_id" t-field-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
-                            </div>
-                            <div t-if="sales_rep">
-                              <t t-call="website_portal.contact"/>
-                            </div>
-                        </div>
-                        <div class="col-md-12 o_my_documents mt16">
-                            <ul name="account-content-nav" class="nav nav-tabs"/>
-                            <div name="account-content" class="tab-content"/>
-                            <div class="oe_structure"/>
-                        </div>
-                        <div class="col-md-12 oe_structure"/>
-                    </div>
-                </div>
-            </t>
-        </xpath>
-    </template>
+    <!--<template id="account" name="Account" inherit_id="website_portal.account">-->
+        <!--<xpath expr="//t[contains(@t-call,'website.layout')]" position="replace">-->
+            <!--<t t-call="website_portal_left_menu.layout">-->
+                <!--<div id="wrap">-->
+                    <!--<div class="container mb64">-->
+                        <!--<div class="col-md-8 o_my_details">-->
+                            <!--<h3>Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>-->
+                            <!--<div t-field="user.partner_id" t-field-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>-->
+                        <!--</div>-->
+                        <!--<div t-if="sales_rep">-->
+                          <!--<t t-call="website_portal.contact"/>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-4 o_my_sidebar">-->
+                        <!--</div>-->
+                        <!--<div class="col-md-12 o_my_documents mt16">-->
+                            <!--<ul name="account-content-nav" class="nav nav-tabs"/>-->
+                            <!--<div name="account-content" class="tab-content"/>-->
+                            <!--<div class="oe_structure"/>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-12 oe_structure"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</t>-->
+        <!--</xpath>-->
+    <!--</template>-->
 
-    <template id="details" name="Details" inherit_id="website_portal.details">
-        <xpath expr="t[@t-call='website.layout']" position="attributes">
-            <attribute name="t-call">website_portal_left_menu.layout</attribute>
-        </xpath>
-    </template>
+    <!--<template id="details" name="Details" inherit_id="website_portal.details">-->
+        <!--<xpath expr="t[@t-call='website.layout']" position="attributes">-->
+            <!--<attribute name="t-call">website_portal_left_menu.layout</attribute>-->
+        <!--</xpath>-->
+    <!--</template>-->
 
 </data>
 </openerp>
