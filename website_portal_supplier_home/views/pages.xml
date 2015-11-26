@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+<template id="home_page" name="Supplier Home Page" page="True">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+        </div>
+    </t>
+</template>
+
+</data>
+</openerp>
