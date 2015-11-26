@@ -26,4 +26,5 @@
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     'installable': True,
+    'auto_install': True,
 }

@@ -19,16 +19,6 @@ class WebsitePortalSupplierHome(WebsiteAccount):
     def account(self):
         partner = request.env.user.partner_id
         if partner.customer:
-            # get customer sales rep
-            if partner.user_id:
-                sales_rep = partner.user_id
-            else:
-                sales_rep = False
-            values = {
-                'sales_rep': sales_rep,
-                'company': request.website.company_id,
-                'user': request.env.user
-            }
-            return request.website.render('website_portal.account', values)
+            return super(WebsitePortalSupplierHome, self).account()
         else:
             return self.supplier_home()
